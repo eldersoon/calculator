@@ -5,10 +5,6 @@ const Calculator: React.FC = () => {
   const [expression, setExpression] = useState('')
   const [validExpression, setValidExpression] = useState('')
 
-  const doSome = () => {
-    //
-  }
-
   const addCharacter = (character: any) => {
     let value = expression + character.toString()
     setExpression(value)
@@ -83,7 +79,6 @@ const Calculator: React.FC = () => {
           type='text'
           name='cal'
           onChange={(e) => {
-            doSome()
             setExpression(e.target.value.replace(/\s/g, ''))
             setValidExpression(e.target.value.replace(/\s/g, ''))
           }}
